@@ -30,6 +30,7 @@ function App() {
           { signal: controller.signal },
         );
         const data = await response.json();
+        data.map((obj) => console.log(obj))
         setPosts(data);
         setStatus("success");
       } catch (err) {
@@ -48,9 +49,15 @@ function App() {
   return (
     <>
       <h1>useEffect</h1>
+      <h1>{seconds}</h1>
       <button onClick={addData}></button>
     </>
   );
 }
 
 export default App;
+
+
+
+
+
